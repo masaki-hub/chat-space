@@ -38,7 +38,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|text|text|null: false|
+|text|text||
 |img|integer||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
