@@ -39,7 +39,7 @@
 |------|----|-------|
 |id|integer|null: false|
 |text|text||
-|img|integer||
+|img|string||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
