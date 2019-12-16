@@ -1,0 +1,115 @@
+$sky-blue:#38aef0;
+
+.chat-main{
+  float: left;
+  width: calc(100% - 300px);
+   &__group-info{
+    background-color:#ffffff;
+    height: 100px;
+   }
+   &__message-list{
+    background-color:#fafafa;
+    height: calc(100vh - 100px - 90px);
+   }
+   &__message-form{
+    position: relative;
+    background-color:#d2d2d2;
+    height: 90px;
+   }
+}
+
+.main-top-items{
+  position:  relative;
+  display: flex;
+   &-left{
+     margin-top: 35px;
+     margin-left: 40px;
+      &--group{
+         font-size: 20px;
+         margin-bottom: 15px;
+        }
+      &--members{
+         color: #999999;
+         font-size: 12px;
+        }
+    }
+   &-right{
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    padding: 0 20px;
+    right: 40px;
+    color: $sky-blue;
+    border: solid 1px $sky-blue;
+    text-decoration: none;
+   }
+}
+
+.message-items{
+  &--top{
+    margin-left: 40px;
+    margin-bottom: 12px;
+    display: flex;
+    padding-top: 35px;
+    &__name{
+      font-size: 16px;
+      color: #333333;
+      display: inline;
+      font-weight: bold;
+    }
+    &__time{
+      font-size: 12px;
+      color: #999999;
+      display: inline;
+      margin-left: 10px;
+    }
+  }
+  &__bottom{
+    margin-bottom: 46px;
+    font-size: 14px;
+    color: #434A54;
+    margin-left: 40px;
+  }
+}
+
+.chat-main__message-form{
+  padding:20px 50px 20px 40px;
+}
+
+.form{
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  height: 90px;
+  padding:20px 50px 20px 40px;
+  &__message{
+    border: none;
+    float: left;
+    height: 50px;
+    width: calc(100% - 150px);
+  }
+  &__mask{
+    background-color: white;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    &__image{
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden{
+      display: none;
+    }
+  }
+  &__submit{
+    background-color: $sky-blue;
+    border: none;
+    color: white;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
+}
+
