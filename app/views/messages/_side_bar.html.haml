@@ -1,0 +1,21 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        user-name
+      .top-items__icons
+        = link_to "#", class:"top-items__icons--edit" do
+          = icon('fas', 'edit',class:'edit')
+        =link_to "#", class:"top-items__icons--cog"  do
+          = icon('fas', 'cog',class:'cog')
+  .side-bar__group-list
+    .side-bar-items
+      .side-bar-items__group
+        group1
+      .side-bar-items__text
+        まだメッセージは入力されていません。
+    .side-bar-items
+      .side-bar-items__group
+        group2
+      .side-bar-items__text
+        まだメッセージは入力されていません。
