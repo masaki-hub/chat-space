@@ -20,6 +20,29 @@
    }
 }
 
+.groups {
+  background-color: $side_blue_light;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  .group {
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name {
+      font-size: $side_group_name;
+      color: #ffffff;
+    }
+    &__message {
+      font-size: $side_group_message;
+      color: #ffffff;
+      margin-top: 5px;
+    }
+  }
+}
+
+.icon{
+  color:white;
+}
+
 .top-items{
   background-color: #253141;
   width: 260px;
@@ -42,29 +65,4 @@
       margin-right: 5px;
      }
   }
-}
-
-.icon{
-  color:white;
-}
-
-.side-bar-items{
-  position:  relative;
-  width: 300px;
-  height: 91px;
-   &__group{
-     position: absolute;
-     color: #ffffff;
-     font-size: 15px;
-     top: 20px;
-     left: 20px;
-   }
-   &__text{
-     position: absolute;
-     color: #ffffff;
-     font-size: 11px;
-     margin-top: 5px;
-     top: 40px;
-     left: 20px;
-   }
 }
