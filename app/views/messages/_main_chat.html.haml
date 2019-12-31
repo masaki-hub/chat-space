@@ -1,36 +1,25 @@
-.chat-main
-  .chat-main__group-info
-    .main-top-items
-      .main-top-items-left
-        .main-top-items-left--group
-          group
-        .main-top-items-left--members
-          Member : masaki
-      = link_to "#", class:"main-top-items-right" do
-        Edit
-  .chat-main__message-list
-    .message-items
-      .message-items--top
-        .message-items--top__neme
-          masaki
-        .message-items--top__time
-          2019/12/19(wed) 17:43:01
-      .message-items__bottom
-        新しいメッセージ
-    .message-items
-      .message-items--top
-        .message-items--top__neme
-          masaki
-        .message-items--top__time
-          2019/12/19(wed) 17:43:01
-      .message-items__bottom
-        新しいメッセージ   
-  .chat-main__message-form
-    %form
-      %input.form__message
-        .form__mask
-          %label.form__mask__image
-            = icon('fa','image',class:'icon')
-            %input.hidden{type: 'file'}
-        %input.form__submit{type: 'submit',value: 'Send'}
-    
+.chat
+  .header
+    .left-header
+      .left-header__title
+        = @group.name
+      %ul.left-header__members
+        Member：
+        %li.member
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+    .right-header
+      .right-header__button
+        = link_to new_group_path do
+          Edit
+  .messages
+    - @messages.each do |message|
+      = render partial: "message", locals: { message: message }
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: ' type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
